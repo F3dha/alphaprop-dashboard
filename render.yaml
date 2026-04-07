@@ -1,0 +1,13 @@
+services:
+  - type: static
+    name: alphaprop-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    publishPath: ./frontend/build
+
+  - type: web
+    name: alphaprop-backend
+    env: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: node backend/server.js
