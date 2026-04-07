@@ -1,12 +1,12 @@
 services:
-  # THE FRONTEND
-  - type: web # Change this from 'static' to 'web'
+  # THE FRONTEND (Static Site)
+  - type: static
     name: alphaprop-frontend
     env: static
     buildCommand: npm install && npm run build
     publishPath: ./frontend/build
 
-  # THE BACKEND
+  # THE BACKEND (Node.js Server)
   - type: web
     name: alphaprop-backend
     env: node
