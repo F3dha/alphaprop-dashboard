@@ -1,12 +1,12 @@
 services:
-  # THE FRONTEND (Static Site)
-  - type: static
+  # THE FRONTEND
+  - type: web
     name: alphaprop-frontend
     env: static
     buildCommand: npm install && npm run build
-    publishPath: ./frontend/build
+    staticPublishPath: ./frontend/build
 
-  # THE BACKEND (Node.js Server)
+  # THE BACKEND
   - type: web
     name: alphaprop-backend
     env: node
